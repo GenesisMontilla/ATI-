@@ -1,0 +1,218 @@
+
+
+@import "./animations.css";
+
+@import url('css/_theme.css');
+
+        #margen {
+            margin-top: 20px;
+        }
+
+        header {
+            color: #2a75bb;
+            margin-top: 0;
+            font-size: 3.12rem;
+            font-family: sans-serif; 
+        }
+
+        .contenedor-imagen {
+            background-color: #2a75bb; 
+             width: 300px;
+             padding-right: 5px;
+        }
+
+        .imagen-perfil {
+            width: 300px;
+            border-radius: 0 0 40px 0; 
+           
+        }
+
+        section {
+            display: flex;    
+        }
+
+        #nombre{
+            font-size: 2.5rem;
+            color: #2a75bb;
+                
+            }
+        #myinfo {
+        text-align: left;
+        padding: 20px;
+        flex-grow: 1;
+        }
+
+       
+        .fila-info {
+            display: flex;
+            justify-content: flex-start; 
+            max-width: 600px; 
+            margin: 8px 0;
+        }
+       
+        #margen a:active {
+            color: var(--accent-color);
+        }
+  
+
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; 
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #4482c3; 
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .ucv {
+            font-size: 0.875rem; 
+            background: rgba(255,255,255,0.2);
+            padding: 2px 4px;
+            margin: 0 4px;
+            border-radius: 3px;
+        }
+
+        .search-bar {
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            width: 35%;
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 8px 15px;
+            flex-grow: 1;
+            outline: none;
+        }
+
+        .search-bar button {
+            background-color: #1a3a5a;
+            color: white;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        .user-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .titulo-semestre {
+            text-align: left;
+            padding: 20px 40px;
+            margin: 0;
+        }
+
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 25px;
+            padding: 20px 40px;
+        }
+
+        .student-card {
+            text-decoration: none;
+            color: black;
+            background: white; 
+            border-radius: 12px; 
+            overflow: hidden;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .student-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #1e2a38; 
+        }
+
+        .info {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .info p {
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .blue-bar {
+            height: 10px;
+            background-color: #70a1d7;
+            border-radius: 5px;
+        }
+
+        .student-card:hover {
+            transform: scale(1.05) rotate(-3deg); 
+            z-index: 10;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .student-card:hover .blue-bar {
+            background-color: #007bff; 
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+            color: #777;
+            font-size: 0.81rem;
+        }
+   
+
+      
+    .menu {
+    display: none;
+}
+
+
+@media (max-width: 768px){
+
+    #profilesection {
+        flex-direction: column; /* Cambia de fila a columna automáticamente */
+        align-items: center;    /* Centra la foto y el texto */
+    }
+    .search-bar, .user-icon {
+        display: none;
+    }
+    .menu {
+        display: block; 
+        font-size: 1.56rem;
+        color: white;
+    }
+
+    .student-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 25px;
+            padding: 20px 40px;
+        }
+}
+
+    
+
+
