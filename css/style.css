@@ -6,6 +6,11 @@
     margin-top: 20px;
 }
 
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     color: #2a75bb;
     margin-top: 0;
