@@ -1,4 +1,4 @@
- [
+ const profiles = [
      {
         "ci": "30370544",
         "image_ext": ".jpg",
@@ -7,11 +7,11 @@
     {
         "ci": "29765263",
         "image_ext": ".jpg",
-        "name": "Sof\u00eda Marcano"
+        "name": "Sofía Marcano"
     },
     {
         "ci": "14444733",
         "image_ext": ".jpg",
-        "name": "Mar\u00eda Paula Herrero"
+        "name": "María Paula Herrero"
     }
-]
+];
