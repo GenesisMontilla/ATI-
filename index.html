@@ -9,7 +9,7 @@
     <link rel="icon" sizes="192x192" href="/icon/cropped-logonuevo-192x192.png">
     <link rel="stylesheet" href="css/style.css">
 
-    <script type="text/javascript" src="conf/configES.json" defer></script>
+    
     <script type="text/javascript" src="js/index.js" defer></script>
     <script src="data/index.json" defer></script>
 </head>
@@ -20,9 +20,9 @@
             <div class="logo">
                 ATI <span class="ucv">[UCV]</span> Log
             </div>
-            <form class="search-bar">
-                <input type="text" placeholder="Nombre...">
-                <button type="submit">Buscar</button>
+            <form class="search-bar" >
+                <input type="text" id="search" placeholder="Nombre...">
+                <button type="submit" id="search-button">Buscar</button>
             </form>
             <div class="user-icon">
                 <img src="icon/userIcon.svg" alt="Usuario">
@@ -32,13 +32,13 @@
         </nav>
     </header>
 
-    <h2 class="titulo-semestre">Semestre 2026-1</h2>
+    <h2 class="titulo-semestre" id="semestre">Semestre 2026-1</h2>
 
     <section class="student-grid">
         </section>
 
     <footer>
-        <p>Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
+        <p id="footer">Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados</p>
     </footer>
 
 </body>
