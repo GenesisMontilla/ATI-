@@ -64,6 +64,7 @@ c.onload = () => {
             mensajeVacio.style.color = '#333';
 
             const textoBase = config.no_results || "No hay perfiles que tengan en su nombre: [query]";
+            
             mensajeVacio.innerHTML = textoBase.replace("[query]", `<strong>${query}</strong>`);
             
             contenedor.appendChild(mensajeVacio);
@@ -119,6 +120,7 @@ c.onload = () => {
             const filtrados = profiles.filter(estudiante => 
                 estudiante.name.toLowerCase().includes(queryMinuscula)
             );
+
             renderizarPerfiles(filtrados, queryOriginal);
         });
     }
@@ -130,6 +132,15 @@ c.onload = () => {
                 const queryOriginal = searchInput.value;
                 window.location.href = `index.html?search=${encodeURIComponent(queryOriginal)}&lang=${lang}`;
             }
+        });
+    }
+
+    const menuBtn = document.querySelector('.menu');
+    const navbar = document.querySelector('.navbar');
+
+    if (menuBtn && navbar) {
+        menuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('open');
         });
     }
 
