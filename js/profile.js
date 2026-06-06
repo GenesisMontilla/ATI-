@@ -17,10 +17,12 @@ c.onload = () => {
     const menuBtn = document.querySelector('.menu');
     const navbar = document.querySelector('.navbar');
 
-    if (menuBtn && navbar) {
-        menuBtn.addEventListener('click', () => {
-            navbar.classList.toggle('open');
-        });
+    if (menuBtn && navbar) { // se remplazo el Eventlistener por este que usa this para el reto 5
+        menuBtn.addEventListener('click', function () {
+        console.log("Caso 1 - this en EventListener:", this);
+        debugger;
+        navbar.classList.toggle('open');
+});
     }
 
     const buscarInfo = () => {
@@ -74,3 +76,23 @@ function render(d) {
     setPlaceholder("busqueda", config.search);
     $("boton-busqueda", config.search);
 }
+
+const estudianteDemo = { // este es lo nuevo que se agrego para usar this en el reto5
+    nombre: "Genesis",
+    mostrarNombre: function () {
+        console.log("Caso 2 - this en objeto:", this);
+        debugger;
+    }
+};
+
+estudianteDemo.mostrarNombre();
+
+const estudianteArrow = { // este es lo nuevo que se agrego para usar this en el reto5
+    nombre: "Genesis",
+    mostrarNombre: () => {
+        console.log("Caso 3 - this en Arrow Function (funcion) :", this);
+        debugger;
+    }
+};
+
+estudianteArrow.mostrarNombre();
